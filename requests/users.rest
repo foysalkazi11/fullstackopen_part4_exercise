@@ -1,0 +1,15 @@
+// get all user
+GET http://localhost:3001/api/users
+
+// delete user
+#DELETE  http://localhost:3001/api/users/648a676e8e8fafb6ffabe4da
+
+// create new user
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "name":"Foysalkazi",
+    "email":"mdfoysalkazi@gmail.com",
+    "password":"H@ello12"
+}

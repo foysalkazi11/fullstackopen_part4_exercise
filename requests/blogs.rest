@@ -1,0 +1,18 @@
+// get all blog
+#GET http://localhost:3001/api/blogs
+
+// delete blog 648903c8212b71584edcbfd4 64893077f7ff7a2716a54c61 
+#DELETE  http://localhost:3001/api/blogs/648a700bd02dd181f91b65a3
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1kZm95c2Fsa2F6aUBnbWFpbC5jb20iLCJpZCI6IjY0OGE2ZWYwZDAyZGQxODFmOTFiNjU5OSIsImlhdCI6MTY4Njc5NDAyOCwiZXhwIjoxNjg2ODgwNDI4fQ.FJuo9lKr8fP4J_Hvpav3V-aQapFz6sPJItvriaE-01c
+
+// create new blog
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1kZm95c2Fsa2F6aUBnbWFpbC5jb20iLCJpZCI6IjY0OGE2ZWYwZDAyZGQxODFmOTFiNjU5OSIsImlhdCI6MTY4Njc5NDAyOCwiZXhwIjoxNjg2ODgwNDI4fQ.FJuo9lKr8fP4J_Hvpav3V-aQapFz6sPJItvriaE-01c
+
+{
+    "title":"Maximum call stack exceeded once again",
+    "author":"Dillion Megida",
+    "url":"https://www.freecodecamp.org/news/what-does-the-maximum-call-stack-stack-exceeded-error-mean/",
+    "likes":65
+}

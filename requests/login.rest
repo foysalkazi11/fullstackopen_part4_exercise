@@ -1,0 +1,8 @@
+// login user
+Get http://localhost:3001/api/login
+Content-Type: application/json
+
+{
+    "email":"mdfoysalkazi@gmail.com",
+    "password":"H@ello12"
+}
