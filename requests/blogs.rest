@@ -1,5 +1,6 @@
 // get all blog
-#GET http://localhost:3001/api/blogs
+GET http://localhost:3001/api/blogs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1kZm95c2Fsa2F6aUBnYW1pbC5jb20iLCJpZCI6IjY0OGE1ZDc4NzE5NTk2ZDY3MmJiMDg4MyIsImlhdCI6MTY4Njg4NjEzNSwiZXhwIjoxNjg2OTcyNTM1fQ.glXmTh9UaJAw7FCgOXs_D-7AeiOrxKpk0s3gAnVFjDg
 
 // delete blog 648903c8212b71584edcbfd4 64893077f7ff7a2716a54c61 
 #DELETE  http://localhost:3001/api/blogs/648a700bd02dd181f91b65a3

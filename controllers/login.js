@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt");
 const loginRoute = require("express").Router();
 
 
-loginRoute.get("/", async (req, res) => {
+loginRoute.post("/", async (req, res) => {
     const { email,password } = req.body;
     const existingUser = await User.findOne({ email });
     if(!existingUser) return res.status(400).send({ error:"User not found" });

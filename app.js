@@ -21,13 +21,13 @@ app.use(cors());
 app.use(express.static("build"));
 app.use(express.json());
 app.use(requestLogger);
-app.use(tokenExtractor);
-app.use(userExtractor);
+// app.use(tokenExtractor);
+// app.use(userExtractor);
 // person route
 app.use("/api/persons",personRoute);
 
 // blog route
-app.use("/api/blogs",blogRoute);
+app.use("/api/blogs",tokenExtractor,userExtractor ,blogRoute);
 
 // user route
 app.use("/api/users",userRouter);

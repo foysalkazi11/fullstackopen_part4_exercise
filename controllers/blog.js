@@ -23,8 +23,27 @@ blogRoute.delete("/:id", async (req, res) => {
         res.status(401).json({ error:"Invalid User" });
     }
 
+});
 
+// delete a single blog
+blogRoute.put("/:id", async (req, res) => {
+    const id = req.params.id;
+    const body = req.body;
+    const decodedToken = jwt.verify(req.token,process.env.JWT_SECRET );
+    if (!decodedToken.id) return res.status(401).json({ error:"Invalid token" });
+    const blog = await Blog.findById(id);
+    if(!blog) res.status(400).send({ error:"No blog found" });
+    if (blog.user.toString() === decodedToken.id.toString()) {
+        const result = await Blog.findByIdAndUpdate(id, body, {
+            new: true,
+            runValidators: true,
+            context: "query",
+        });
+        return res.json(result);
 
+    }else{
+        res.status(401).json({ error:"Invalid User" });
+    }
 
 });
 
